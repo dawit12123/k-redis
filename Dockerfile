@@ -10,6 +10,9 @@ COPY redis.conf /usr/local/etc/redis/redis.conf
 # Change ownership of the configuration file to redis user
 RUN chown redis:redis /usr/local/etc/redis/redis.conf
 
+# Set the environment variable for the port
+ENV PORT 6380
+
 # Expose the new Redis port
 EXPOSE 6380
 
