@@ -1,9 +1,6 @@
 # Use the official Redis image from the Docker Hub
 FROM redis:latest
 
-# Create a redis user and group
-RUN groupadd -r redis && useradd -r -g redis redis
-
 # Create the log file directory and set permissions
 RUN mkdir -p /var/log/redis && chown redis:redis /var/log/redis
 
